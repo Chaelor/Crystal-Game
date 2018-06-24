@@ -6,16 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="reset.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
 </head>
 <body>
     <div class="container">
         <div class="contentContainer">
             <div class="content">
                 <h1>Welcome to the crystal game!</h1>
-                <h2>Match the number at the bottom by clicking on crystals</h2>
-                <h3></h3>
+                <div class="directions">
+                    <h2>Match the number at the bottom by clicking on crystals</h2>
+                    <h2>Every game the crystals will have different numbers!</h2>
+                    <p>Game resets when you win or lose!</p>
+                    <p>Land on the number and win! Go over and lose!</p>
+                </div>
                 <div class="crystals">
                     <div class="crystalOne"></div>
                     <div class="crystalTwo"></div>
@@ -26,10 +31,11 @@
                     <div class="userArea"></div>
                     <div class="computerArea"></div>
                     <div class="recordKeeping"></div>
+                    <div class="lastGameReport"></div>
                 </div>
             </div>
         </div>
     </div>
 </body>
-    <script type="text/javascript" src="game.js"></script>
+    <script type="text/javascript" src="./assets/javascript/game.js"></script>
 </html>

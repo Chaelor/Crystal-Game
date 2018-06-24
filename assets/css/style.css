@@ -1,0 +1,78 @@
+
+/******** Global elements ********/
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: black;
+    color:white;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size:1.5em;
+    padding:7px;
+}
+
+p {
+    padding: 5px;
+}
+
+/******** Containers ********/
+.container {
+    width: 800px;
+    margin: 100px auto 0 auto;
+}
+
+.content {
+    text-align:center;
+}
+
+/******** Wanna make crystals? ********/
+.crystals{
+    width: 475px;
+    margin:0 auto;
+}
+
+.crystalOne{
+    background-image: url(../images/redCrystal.png);
+    width: 225px;
+    height: 225px;
+    display: inline-block;
+}
+
+.crystalTwo{
+    background-image: url(../images/yellowCrystal.png);
+    width: 225px;
+    height: 225px;
+    display: inline-block;
+}
+
+.crystalThree{
+    background-image: url(../images/greenCrystal.png);
+    width: 225px;
+    height: 225px;
+    display: inline-block;
+}
+
+.crystalFour {
+    background-image: url(../images/purpleCrystal.png);
+    width: 225px;
+    height: 225px;
+    display: inline-block;
+}
+
+
+/******** Score Area ********/
+.scoreArea{
+    padding: 5px;
+}
+
+.userArea {
+    margin: 5px;
+}
+
+.computerArea {
+    margin: 5px;
+}
