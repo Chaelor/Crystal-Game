@@ -33,7 +33,7 @@ console.log(computerNumber);
 
 //This gets a random number for a crystal
 function getCrystalNumber() {
-    return Math.floor(Math.random() * 10);
+    return Math.floor(Math.random() * 15);
 }
 
 //This will reset and start the game board
