@@ -82,6 +82,8 @@ p {
 @media only screen and (max-width: 600px) {
     .container {
         width: 550px;
+        padding-top: 0px;
+        margin-top: 20px;
     }
     
     .crystalOne{
@@ -117,9 +119,14 @@ p {
 @media only screen and (max-width: 400px) {
     .container {
         width: 350px;
-        padding: 20px auto;
+        padding: 10px auto;
     }
-    
+
+    .crystals{
+        width: 350px;
+        margin:0 auto;
+    }
+
     .crystalOne{
         background-image: url(../images/redCrystal.png);
         width: 225px;
