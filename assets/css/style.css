@@ -40,6 +40,17 @@ p {
     width: 225px;
     height: 225px;
     display: inline-block;
+    position:relative;
+}
+
+.crystalOneInfo{
+    position: absolute;
+    top:60%;
+    left:37%;
+    height: 50px;
+    width: 20%;
+    font-size:2em;
+    display:none;
 }
 
 .crystalTwo{
@@ -47,21 +58,60 @@ p {
     width: 225px;
     height: 225px;
     display: inline-block;
+    position: relative;
 }
+
+.crystalTwoInfo{
+    position: absolute;
+    top:60%;
+    left:37%;
+    height: 50px;
+    width: 20%;
+    opacity:.8;
+    font-size:2em;
+    display:none;
+}
+
 
 .crystalThree{
     background-image: url(../images/greenCrystal.png);
     width: 225px;
     height: 225px;
     display: inline-block;
+    position:relative;
 }
+
+.crystalThreeInfo{
+    position: absolute;
+    top:60%;
+    left:40%;
+    height: 50px;
+    width: 20%;
+    font-size: 2em;
+    opacity:.8;
+    display:none;
+}
+
 
 .crystalFour {
     background-image: url(../images/purpleCrystal.png);
     width: 225px;
     height: 225px;
     display: inline-block;
+    position:relative;
 }
+
+.crystalFourInfo{
+    position: absolute;
+    top:60%;
+    left:40%;
+    height: 50px;
+    width: 20%;
+    opacity: .8;
+    font-size:2em;
+    display:none;
+}
+
 
 
 /******** Score Area ********/

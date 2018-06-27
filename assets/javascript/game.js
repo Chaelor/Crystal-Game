@@ -38,12 +38,26 @@ function getCrystalNumber() {
 
 //This will reset and start the game board
 function resetGame() {
+
+    //Hide the crystal values
+    $(".crystalOneInfo").hide()
+    $(".crystalTwoInfo").hide()
+    $(".crystalThreeInfo").hide()
+    $(".crystalFourInfo").hide()
+
     //Reset crystals
     crystalOneNumber = Math.floor(Math.random() * 10);
     crystalTwoNumber = Math.floor(Math.random() * 10);
     crystalThreeNumber = Math.floor(Math.random() * 10);
     crystalFourNumber = Math.floor(Math.random() * 10);
 
+    //Set the crystal values while still hidden
+    $(".crystalOneInfo").text(crystalOneNumber);
+    $(".crystalTwoInfo").text(crystalTwoNumber);
+    $(".crystalThreeInfo").text(crystalThreeNumber);
+    $(".crystalFourInfo").text(crystalFourNumber);
+
+    //What numbers did these gems get?
     console.log(crystalOneNumber);
     console.log(crystalTwoNumber);
     console.log(crystalThreeNumber);
@@ -72,6 +86,13 @@ function getComputerNumber(){
 
 //This will render the first game
 function gameRender() {
+
+    //Give the crystal info their numbers
+    $(".crystalOneInfo").text(crystalOneNumber);
+    $(".crystalTwoInfo").text(crystalTwoNumber);
+    $(".crystalThreeInfo").text(crystalThreeNumber);
+    $(".crystalFourInfo").text(crystalFourNumber);
+
     userArea.text("Your current number is " + currentUserNumber);
     computerArea.text("Try to reach this number! Don't go over or you'll lose! " + computerNumber);
     recordKeeping.html("<p>Wins: " + userWins + "</p><p>Losses: " + userLosses);
@@ -79,11 +100,16 @@ function gameRender() {
 
 //Did the user win or lose?
 function winCheck() {
+
+    //User loses
     if (currentUserNumber > computerNumber){
         userLosses++;
         lastGameReport.text("I am sorry to inform you that you went over the number! :(")
         resetGame();
-    } else if(currentUserNumber === computerNumber){
+    } 
+    
+    //User wins
+    else if(currentUserNumber === computerNumber){
         lastGameReport.text("Winner winner chicken dinner! :)")
         userWins++;
         resetGame();
@@ -92,33 +118,43 @@ function winCheck() {
 
 //When user clicks on a crystal, do these things currentUserNumber += crystalClickedNumber
 crystalOne.on("click", function(e) {
+
+    //Show the value of this crystal
+    $(".crystalOneInfo").show();
+
+    //Add this crystals number to the current number
     currentUserNumber += crystalOneNumber;
+
+    //Update current number
     userArea.text("Your current number is " + currentUserNumber);
+
+    //Did the user win or lose?
     winCheck();
-    return;
 });
 
+
+//////////////////////////////SEEE FIRST BUTTON
 crystalTwo.on("click", function(e) {
+    $(".crystalTwoInfo").show();
     currentUserNumber += crystalTwoNumber;
     userArea.text("Your current number is " + currentUserNumber);
     winCheck();
-    return;
 });
 
 crystalThree.on("click", function(e) {
+    $(".crystalThreeInfo").show();
     currentUserNumber += crystalThreeNumber;
     userArea.text("Your current number is " + currentUserNumber);
     winCheck();
-    return;
 });
 
 crystalFour.on("click", function(e) {
+    $(".crystalFourInfo").show();
     currentUserNumber += crystalFourNumber;
     userArea.text("Your current number is " + currentUserNumber);
     winCheck();
-    return;
 });
 
-
+//Initial game render
 gameRender();
 });
